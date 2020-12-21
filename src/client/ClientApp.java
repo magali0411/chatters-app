@@ -34,10 +34,10 @@ public class ClientApp extends Application {
 
 
     // Inititalisation de l'emitteur et du receiver
-    Emitter emI;
+    Emitter emI ;
     Receiver reI;
+    Connection connection;
 
-    ObservableList<String> listeClients = FXCollections.observableArrayList();
     ObservableList<String> listeMessages = FXCollections.observableArrayList();
 
 
@@ -89,23 +89,17 @@ public class ClientApp extends Application {
 
 
                     try {
-                        Registry registry = LocateRegistry.getRegistry(port);
 
-                        // instanciation du remote serveur
-                        reI =  (Receiver) Naming.lookup("rmi://localhost:" + port +"/serveur");
+                        // Instanciation de la connection au serveur
+                        connection = (Connection) Naming.lookup("rmi://localhost:" + port +"/connection");
+
+                        // instanciation du receiver
+                        this.reI = new ReceiverImpl();
                         reI.addClient(name);
-
-                        // Instanciation de la connection
-                        Connection connection = (Connection) Naming.lookup("rmi://localhost:" + port +"/connection");
 
                         //Instanciation de l'emitteur
                         this.emI = (Emitter) connection.connect(name, reI);
-                        System.out.println("debug emitter " + this.emI.getName());
 
-                        //listeClients.add(name);
-
-                        // Debugging
-                        String msg="["+name+"] s'est connecté(e)";
 
                         // Toast
                         Alert popupConnect = Message.showPopupInfo("Connection réussie", "Vous êtes connecté(e) au serveur de chat en tant que "+ name );
@@ -117,9 +111,9 @@ public class ClientApp extends Application {
                     }
 
 
-                    if (emI != null ) {
+                    if (emI != null && reI != null && connection != null) {
                         try {
-                            primaryStage.setScene(clientScene(emI, reI));
+                            primaryStage.setScene(clientScene(emI, reI, connection));
                         } catch (RemoteException e) {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
@@ -147,7 +141,7 @@ public class ClientApp extends Application {
 
     }
 
-    public Scene clientScene(Emitter emI, Receiver reI) throws RemoteException {
+    public Scene clientScene(Emitter emI, Receiver reI, Connection co) throws RemoteException {
         GridPane rootPane = new GridPane();
         rootPane.setPadding(new Insets(20));
         rootPane.setAlignment(Pos.CENTER);
@@ -161,6 +155,9 @@ public class ClientApp extends Application {
 //		chatListView.setItems(observable);
 
         TextField chatTextField = new TextField();
+        TextField destTextField = new TextField();
+        Label destLabel = new Label("Destinaire");
+        Label userLabel = new Label("Bienvenu " + emI.getName());
         ListView chatBox = new ListView();
         TextField bandeauClient = new TextField();
 
@@ -178,18 +175,18 @@ public class ClientApp extends Application {
         EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e)
             {
-                if(!chatTextField.getText().isEmpty()) {
+                if(!chatTextField.getText().isEmpty() && !destTextField.getText().isEmpty()) {
                     try {
-                        emI.sendMessages(chatTextField.getText() );
-                        System.out.println("debug emitter 2 " + emI.getName());
-                        //reI.receive(emI.getName(),chatTextField.getText());
-                        listeMessages.clear();
-                        listeMessages.add(reI.getMsg().toString());
+                        Receiver reDest = co.getReceiver(destTextField.getText());
+                        emI.sendMessages(reDest, chatTextField.getText() );
+                        listeMessages.add("[" + emI.getName()+ "]" + chatTextField.getText());
+
                     } catch (RemoteException | MalformedURLException | NotBoundException e1) {
                         e1.printStackTrace();
                     }
                     //System.out.println("Envoi du message " + chatTextField.getText());
                     chatTextField.clear();
+                    destTextField.clear();
                 } else {
                     System.out.println("Null message sent.");
                 }
@@ -210,6 +207,7 @@ public class ClientApp extends Application {
 
         // Maj du conteenu dynamique
         bandeauClient.appendText(reI.getClients().toString());
+        listeMessages.addAll(reI.getMsg());
         chatBox.setItems(listeMessages);
 
         // clean du chat
@@ -218,13 +216,14 @@ public class ClientApp extends Application {
         });
 
 
-
-
         //rootPane.add(chatListView, 0, 0);
         rootPane.add(bandeauClient,0,0);
+        rootPane.add(userLabel,1,0);
         rootPane.add(chatBox, 0, 1);
         rootPane.add(chatTextField, 0, 2);
-        rootPane.add(clearBtn,1,3);
+        rootPane.add(destLabel, 0, 3);
+        rootPane.add(destTextField, 1, 3);
+        rootPane.add(clearBtn,0,4);
 
         return new Scene(rootPane, 400, 400);
 

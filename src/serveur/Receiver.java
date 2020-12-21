@@ -18,11 +18,9 @@ public interface Receiver extends Remote {
     void addClient(String pseudo) throws RemoteException;
 	void removeClient(String pseudo) throws RemoteException;
 	void initClient(List<String> clients) throws RemoteException;
-	void receive(Emitter sender, String msg) throws RemoteException;
+	void receive(String sender, String msg) throws RemoteException;
 	ArrayList<String> getClients() throws RemoteException;
 	ArrayList<String> getMsg() throws RemoteException;
-
-	ArrayList<Receiver> getAllReceiver() throws RemoteException;
 
 	void clearMsg() throws RemoteException;
 

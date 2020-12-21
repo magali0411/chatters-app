@@ -12,5 +12,5 @@ public interface Connection extends Remote {
     Emitter connect(String pseudo, Receiver re) throws RemoteException, MalformedURLException, NotBoundException;
     void disconnect(String pseudo) throws RemoteException;
 
-
+    Receiver getReceiver(String text) throws RemoteException;
 }

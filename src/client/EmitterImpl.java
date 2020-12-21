@@ -17,9 +17,7 @@ public class EmitterImpl extends UnicastRemoteObject implements Emitter {
 
     //public Chat client=null;
     public String clientAssocie;
-    public List<String> messages = new ArrayList<String>();
 
-    Map<String, String> persons = new HashMap<String, String>();
 
     // Now add observability by wrapping it with ObservableList.
 
@@ -40,16 +38,8 @@ public class EmitterImpl extends UnicastRemoteObject implements Emitter {
         return this;
     }
 
-    public void sendMessages(String s) throws RemoteException, MalformedURLException, NotBoundException {
-        if (!s.isEmpty())
-            messages.add(s);
-        System.out.println("[" + this.getName() + "] "+ s);
-
-        //re.receive(this.getName(), s);
-        Receiver re = (Receiver) Naming.lookup("rmi://localhost:" + 1099 +"/serveur");
-        re.receive(this,s);
-
-        //persons.put(to, s);
+    public void sendMessages(Receiver to, String s) throws RemoteException, MalformedURLException, NotBoundException {
+        to.receive(this.getName(),s);
     }
 
 

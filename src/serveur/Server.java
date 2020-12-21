@@ -22,9 +22,9 @@ public class Server {
 //	    	String name=s.nextLine().trim();
 //
         // component instanciation
-        EmitterImpl chat = new EmitterImpl();
+        //EmitterImpl chat = new EmitterImpl();
         ConnectionImpl connection = new ConnectionImpl();
-        ReceiverImpl serveur = new ReceiverImpl();
+        //ReceiverImpl serveur = new ReceiverImpl();
 
         // component instanciation and implicit activation
 
@@ -34,9 +34,9 @@ public class Server {
         //publication of component reference in the registry
         //Naming.rebind("Hello", myComponent);
         //Naming.rebind("Dialogue", test);
-        Naming.rebind("chat", chat);
+        //Naming.rebind("chat", chat);
         Naming.rebind("connection", connection);
-        Naming.rebind("serveur", serveur);
+        //Naming.rebind("serveur", serveur);
 
 
         //Receiver serveur = (Receiver) Naming.lookup("rmi://localhost:" + port +"/receiver");

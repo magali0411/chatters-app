@@ -13,7 +13,6 @@ public class ReceiverImpl extends UnicastRemoteObject implements Receiver {
 
     public static List<String> listMessages = new ArrayList<>();
     public static List<String> clientList = new ArrayList<>();
-    public ArrayList<Receiver> allReceiver = new ArrayList<>();
 
 
     public ReceiverImpl() throws RemoteException {
@@ -26,7 +25,6 @@ public class ReceiverImpl extends UnicastRemoteObject implements Receiver {
         System.out.println("Client ajouté : " + pseudo);
 
         clientList.add(pseudo);
-        allReceiver.add(this);
     }
 
     @Override
@@ -35,7 +33,6 @@ public class ReceiverImpl extends UnicastRemoteObject implements Receiver {
         //ChatImpl generalChat = new ChatImpl();
         //generalChat.removeClient(pseudo);
         clientList.remove(pseudo);
-        allReceiver.remove(this);
     }
 
     @Override
@@ -44,12 +41,13 @@ public class ReceiverImpl extends UnicastRemoteObject implements Receiver {
     }
 
     @Override
-    public void receive(Emitter sender, String msg) throws RemoteException {
+    public void receive(String sender, String msg) throws RemoteException {
         //System.out.println("J'ai bien reçu le message de "+ sender + " disant que " + msg);
         //for (Receiver re : this.getAllReceiver()) {
         //    re.receive(sender, msg);
         //}
-        listMessages.add("[" + sender.getName() +"] " + msg + "\n");
+        listMessages.add("[" + sender+"] " + msg + "\n");
+        System.out.println("OUI LA VIE" + "[" + sender +"] " + msg + "\n");
         //return ("[" + sender +"] " + msg);
     }
 
@@ -63,10 +61,6 @@ public class ReceiverImpl extends UnicastRemoteObject implements Receiver {
         return (ArrayList<String>) listMessages;
     }
 
-    @Override
-    public ArrayList<Receiver> getAllReceiver() throws RemoteException {
-        return this.allReceiver;
-    }
 
     @Override
     public void clearMsg() throws RemoteException {

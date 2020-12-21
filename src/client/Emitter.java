@@ -14,7 +14,7 @@ public interface Emitter extends Remote {
 
     Emitter getClient() throws RemoteException;
 
-    void sendMessages( String message) throws RemoteException, MalformedURLException, NotBoundException;
+    void sendMessages(Receiver to, String message) throws RemoteException, MalformedURLException, NotBoundException;
 
     void setName(String name) throws RemoteException;
 }
