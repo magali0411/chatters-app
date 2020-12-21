@@ -6,7 +6,12 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.Timer;
+import java.util.TimerTask;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,6 +27,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import javafx.util.Duration;
 import serveur.Receiver;
 import serveur.ReceiverImpl;
 import util.Message;
@@ -33,12 +39,13 @@ public class ClientApp extends Application {
     final static String defaultPort = "1099";
 
 
-    // Inititalisation de l'emitteur et du receiver
+    // Inititalisation des éléments RMI
     Emitter emI ;
     Receiver reI;
     Connection connection;
 
-    ObservableList<String> listeMessages = FXCollections.observableArrayList();
+    // Liste dynamique des messages du chat
+    public ObservableList<String> listeMessages = FXCollections.observableArrayList();
 
 
     @Override
@@ -157,9 +164,10 @@ public class ClientApp extends Application {
         TextField chatTextField = new TextField();
         TextField destTextField = new TextField();
         Label destLabel = new Label("Destinaire");
-        Label userLabel = new Label("Bienvenu " + emI.getName());
+        Label userLabel = new Label("Bonjour " + emI.getName());
+        Label msgLabel = new Label("Messages");
         ListView chatBox = new ListView();
-        TextField bandeauClient = new TextField();
+        Label bandeauClient = new Label();
 
         chatBox.setPrefHeight(250);
         chatBox.setDisable(true);
@@ -167,19 +175,35 @@ public class ClientApp extends Application {
 
         Button clearBtn = new Button("Clear chat");
 
-        bandeauClient.setDisable(true);
-        bandeauClient.setMouseTransparent(true);
 
+        // Mise à jour du chat
+        EventHandler<ActionEvent> maj = new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent e) {
+                try {
+                    listeMessages.addAll(reI.getMsg());
+                } catch (RemoteException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        };
 
         // action event
         EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e)
             {
+
                 if(!chatTextField.getText().isEmpty() && !destTextField.getText().isEmpty()) {
                     try {
+                        listeMessages.addAll(reI.getMsg());
                         Receiver reDest = co.getReceiver(destTextField.getText());
-                        emI.sendMessages(reDest, chatTextField.getText() );
-                        listeMessages.add("[" + emI.getName()+ "]" + chatTextField.getText());
+                        if (reDest == null) {
+                            Alert popupAlert = Message.showPopupAlert("Impossible d'envoyer le message", "L'utilisateur " + destTextField.getText() + " n'est pas connecté.");
+                            popupAlert.show();
+                        } else {
+                            emI.sendMessages(reDest, chatTextField.getText());
+                            reI.receive(emI.getName(),chatTextField.getText()); // self reception
+                        }
+
 
                     } catch (RemoteException | MalformedURLException | NotBoundException e1) {
                         e1.printStackTrace();
@@ -191,39 +215,44 @@ public class ClientApp extends Application {
                     System.out.println("Null message sent.");
                 }
 
-//            	try {
-//					for (String text : client.getMessage("albert")) {
-//						chatBox.appendText(text + "\n");
-//						System.out.println("Ajout de " + text);
-//					}
-//				} catch (RemoteException e1) {
-//					// TODO Auto-generated catch block
-//					e1.printStackTrace();
-//				}
             }
         };
 
         chatTextField.setOnAction(event);
 
         // Maj du conteenu dynamique
-        bandeauClient.appendText(reI.getClients().toString());
-        listeMessages.addAll(reI.getMsg());
-        chatBox.setItems(listeMessages);
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), ev -> {
+            try {
+                listeMessages.clear();
+                listeMessages.addAll(reI.getMsg());
+                chatBox.setItems(listeMessages);
+                bandeauClient.setText("Utilisateurs connectés" + reI.getClients().toString());
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }));
+        // Play infini
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
 
         // clean du chat
-        clearBtn.onMouseClickedProperty().set((MouseEvent t) -> {
+        clearBtn.onMouseClickedProperty().set((MouseEvent me) -> {
             { listeMessages.clear(); }
         });
 
 
         //rootPane.add(chatListView, 0, 0);
-        rootPane.add(bandeauClient,0,0);
-        rootPane.add(userLabel,1,0);
-        rootPane.add(chatBox, 0, 1);
-        rootPane.add(chatTextField, 0, 2);
-        rootPane.add(destLabel, 0, 3);
-        rootPane.add(destTextField, 1, 3);
-        rootPane.add(clearBtn,0,4);
+        rootPane.add(userLabel,0,0);
+        rootPane.add(bandeauClient,0,1);
+        rootPane.add(chatBox, 0, 2);
+        rootPane.add(msgLabel,0,3);
+        rootPane.add(destLabel, 1, 3);
+        rootPane.add(chatTextField, 0, 4);
+        rootPane.add(destTextField, 1, 4);
+        rootPane.add(clearBtn,0,5);
+
+
+
 
         return new Scene(rootPane, 400, 400);
 
@@ -232,4 +261,5 @@ public class ClientApp extends Application {
     public static void main(String[] args){
         launch(args);
     }
+
 }

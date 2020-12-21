@@ -18,9 +18,6 @@ public class EmitterImpl extends UnicastRemoteObject implements Emitter {
     //public Chat client=null;
     public String clientAssocie;
 
-
-    // Now add observability by wrapping it with ObservableList.
-
     public EmitterImpl() throws RemoteException {
     }
 

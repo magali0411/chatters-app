@@ -30,8 +30,6 @@ public class ReceiverImpl extends UnicastRemoteObject implements Receiver {
     @Override
     public void removeClient(String pseudo) throws RemoteException {
 
-        //ChatImpl generalChat = new ChatImpl();
-        //generalChat.removeClient(pseudo);
         clientList.remove(pseudo);
     }
 
@@ -42,13 +40,9 @@ public class ReceiverImpl extends UnicastRemoteObject implements Receiver {
 
     @Override
     public void receive(String sender, String msg) throws RemoteException {
-        //System.out.println("J'ai bien reçu le message de "+ sender + " disant que " + msg);
-        //for (Receiver re : this.getAllReceiver()) {
-        //    re.receive(sender, msg);
-        //}
+
         listMessages.add("[" + sender+"] " + msg + "\n");
-        System.out.println("OUI LA VIE" + "[" + sender +"] " + msg + "\n");
-        //return ("[" + sender +"] " + msg);
+
     }
 
     @Override
