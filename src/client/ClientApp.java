@@ -25,6 +25,9 @@ import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import javafx.util.Duration;
@@ -38,18 +41,25 @@ public class ClientApp extends Application {
     final static String defaultHost = "localhost";
     final static String defaultPort = "1099";
 
+    //Font
+    Font FontBold = Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 12);
+    Font FontItalic = Font.font("verdana", FontWeight.EXTRA_LIGHT, FontPosture.ITALIC, 9);
+
 
     // Inititalisation des éléments RMI
     Emitter emI ;
     Receiver reI;
     Connection connection;
 
-    // Liste dynamique des messages du chat
+    // Liste dynamique des messages et des clients du chat
     public ObservableList<String> listeMessages = FXCollections.observableArrayList();
+    public ObservableList<String> listeClients = FXCollections.observableArrayList();
 
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+        Alert popupClose = Message.showPopupAlert("Vous quittez l'application de chat","");
 
         Group group = new Group();
         Scene scene = new Scene(group ,600, 300);
@@ -61,6 +71,7 @@ public class ClientApp extends Application {
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent we) {
                 System.out.println("Stage is closing");
+                popupClose.show();
             }
         });
 
@@ -84,7 +95,7 @@ public class ClientApp extends Application {
         Label errorLabel = new Label();
 
 
-        Button submitBtn = new Button("Done");
+        Button submitBtn = new Button("Connection");
         submitBtn.onMouseClickedProperty().set((MouseEvent t) -> {
             {
                 //System.out.println(pseudoField.getText() + " " + portNumberField.getText());
@@ -168,12 +179,16 @@ public class ClientApp extends Application {
         Label msgLabel = new Label("Messages");
         ListView chatBox = new ListView();
         Label bandeauClient = new Label();
+        Label instructionLabel = new Label("Appuyer sur entrer pour envoyer un message");
 
         chatBox.setPrefHeight(250);
         chatBox.setDisable(true);
         chatBox.setMouseTransparent(true);
 
-        Button clearBtn = new Button("Clear chat");
+        userLabel.setFont(FontBold);
+        instructionLabel.setFont(FontItalic);
+
+        Button clearBtn = new Button("Supprimer les messages");
 
 
         // Mise à jour du chat
@@ -211,7 +226,10 @@ public class ClientApp extends Application {
                     //System.out.println("Envoi du message " + chatTextField.getText());
                     chatTextField.clear();
                     destTextField.clear();
+
                 } else {
+                    Alert alertNoMsg = Message.showPopupAlert("Impossible d'envoyer le message", "Veuillez saisir un message et un destinaire");
+                    alertNoMsg.show();
                     System.out.println("Null message sent.");
                 }
 
@@ -219,6 +237,7 @@ public class ClientApp extends Application {
         };
 
         chatTextField.setOnAction(event);
+        destTextField.setOnAction(event);
 
         // Maj du conteenu dynamique
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), ev -> {
@@ -226,6 +245,9 @@ public class ClientApp extends Application {
                 listeMessages.clear();
                 listeMessages.addAll(reI.getMsg());
                 chatBox.setItems(listeMessages);
+
+                listeClients.clear();
+                listeClients.addAll(reI.getClients());
                 bandeauClient.setText("Utilisateurs connectés" + reI.getClients().toString());
             } catch (RemoteException e) {
                 e.printStackTrace();
@@ -237,7 +259,9 @@ public class ClientApp extends Application {
 
         // clean du chat
         clearBtn.onMouseClickedProperty().set((MouseEvent me) -> {
-            { listeMessages.clear(); }
+            { listeMessages.clear();
+              chatBox.setItems(listeMessages);
+            }
         });
 
 
@@ -250,6 +274,7 @@ public class ClientApp extends Application {
         rootPane.add(chatTextField, 0, 4);
         rootPane.add(destTextField, 1, 4);
         rootPane.add(clearBtn,0,5);
+        rootPane.add(instructionLabel,0,6);
 
 
 
@@ -263,3 +288,7 @@ public class ClientApp extends Application {
     }
 
 }
+
+//TODO Changer première vue login
+//TODO Maj des clients connectés
+//TODO Expand message du bas
