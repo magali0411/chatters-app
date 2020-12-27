@@ -1,5 +1,7 @@
 package serveur;
 
+import client.Connection;
+import client.ConnectionImpl;
 import client.Emitter;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -46,7 +48,7 @@ public class ReceiverImpl extends UnicastRemoteObject implements Receiver {
     }
 
     @Override
-    public ArrayList<String> getClients() {
+    public ArrayList<String> getClients() throws RemoteException {
         return (ArrayList<String>) clientList;
     }
 

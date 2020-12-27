@@ -26,12 +26,16 @@ public class ConnectionImpl extends UnicastRemoteObject implements Connection {
 
     @Override
     public Emitter connect(String name, Receiver re) throws RemoteException, MalformedURLException, NotBoundException {
+
+
+        re.initClient(getAllusername());
+
         Emitter emitter = new EmitterImpl();
         emitter.setName(name);
 
         dicoProxy.put(name,re);
-
-        re.initClient(getAllusername());
+        re.addClient(name);
+        
         System.out.println(name + " s'est connecté au chat");
 
         return emitter;
@@ -39,6 +43,12 @@ public class ConnectionImpl extends UnicastRemoteObject implements Connection {
 
     @Override
     public void disconnect(String pseudo) throws RemoteException {
+        dicoProxy.remove(pseudo);
+        Receiver reSuppr = this.getReceiver(pseudo);
+        if (reSuppr != null)
+            reSuppr.removeClient(pseudo);
+        else
+            System.out.println("Impossible de déconnecter le client " + pseudo);
 
     }
 
@@ -66,5 +76,13 @@ public class ConnectionImpl extends UnicastRemoteObject implements Connection {
                 re = dicoProxy.get(reName);
         }
         return re;
+    }
+
+    @Override
+    public void synchronise() throws RemoteException {
+        for (Receiver re : getAllReceiver()) {
+            re.initClient(getAllusername());
+        }
+
     }
 }

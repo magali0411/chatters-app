@@ -4,15 +4,12 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -62,7 +59,7 @@ public class ClientApp extends Application {
         Alert popupClose = Message.showPopupAlert("Vous quittez l'application de chat","");
 
         Group group = new Group();
-        Scene scene = new Scene(group ,600, 300);
+        Scene scene = new Scene(group ,600, 400);
         scene.setFill(Color.WHITE);
         primaryStage.setTitle("Chat-app");
         primaryStage.setScene(chatScene(primaryStage));
@@ -113,7 +110,7 @@ public class ClientApp extends Application {
 
                         // instanciation du receiver
                         this.reI = new ReceiverImpl();
-                        reI.addClient(name);
+                        //reI.addClient(name);
 
                         //Instanciation de l'emitteur
                         this.emI = (Emitter) connection.connect(name, reI);
@@ -189,6 +186,7 @@ public class ClientApp extends Application {
         instructionLabel.setFont(FontItalic);
 
         Button clearBtn = new Button("Supprimer les messages");
+        Button disconnectBtn = new Button("Deconnection");
 
 
         // Mise à jour du chat
@@ -240,15 +238,19 @@ public class ClientApp extends Application {
         destTextField.setOnAction(event);
 
         // Maj du conteenu dynamique
+
+
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), ev -> {
             try {
                 listeMessages.clear();
                 listeMessages.addAll(reI.getMsg());
                 chatBox.setItems(listeMessages);
 
+
+                co.synchronise();
                 listeClients.clear();
                 listeClients.addAll(reI.getClients());
-                bandeauClient.setText("Utilisateurs connectés" + reI.getClients().toString());
+                bandeauClient.setText("Clients connectés : " +listeClients);
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
@@ -259,8 +261,26 @@ public class ClientApp extends Application {
 
         // clean du chat
         clearBtn.onMouseClickedProperty().set((MouseEvent me) -> {
-            { listeMessages.clear();
-              chatBox.setItems(listeMessages);
+            {
+                try {
+                    reI.clearMsg();
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+                listeMessages.clear();
+                chatBox.setItems(listeMessages);
+            }
+        });
+
+        disconnectBtn.onMouseClickedProperty().set((MouseEvent mee) -> {
+            {
+                try {
+                    co.disconnect(emI.getName());
+                    System.out.println("Client deconnecte " + emI.getName());
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+                Platform.exit();
             }
         });
 
@@ -274,6 +294,7 @@ public class ClientApp extends Application {
         rootPane.add(chatTextField, 0, 4);
         rootPane.add(destTextField, 1, 4);
         rootPane.add(clearBtn,0,5);
+        rootPane.add(disconnectBtn,1,5);
         rootPane.add(instructionLabel,0,6);
 
 
@@ -289,6 +310,3 @@ public class ClientApp extends Application {
 
 }
 
-//TODO Changer première vue login
-//TODO Maj des clients connectés
-//TODO Expand message du bas

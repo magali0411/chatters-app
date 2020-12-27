@@ -13,4 +13,6 @@ public interface Connection extends Remote {
     void disconnect(String pseudo) throws RemoteException;
 
     Receiver getReceiver(String text) throws RemoteException;
+
+    void synchronise() throws RemoteException;
 }
