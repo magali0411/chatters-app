@@ -53,7 +53,7 @@ Pour lancer l'application cliente, il faut lancer la classe ClientApp qui étend
 
 
 
-L'application ne se lance que si tout les champs sont complets et un serveur écoute bien sur le port sur serveur précisé. Dans l'exemple, l'utilisateur à essayé de se connecté au __port 109__ au lieu du __1099__ et ne peut donc pas se connecter. 
+L'application ne se lance que si tout les champs sont complets et un serveur écoute bien sur le port sur serveur précisé. Dans l'exemple, l'utilisateur à essayé de se connecter au __port 109__ au lieu du __1099__ et ne peut donc pas se connecter. 
 
 Trois clients connectés sur le __port 1099__ du serveur _locahost_ :
 
