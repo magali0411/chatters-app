@@ -13,7 +13,7 @@ L'objectif de ce projet est de développer une application logicielle client / s
 
 Dans le cadre de ce projet, j'ai choisi de réaliser l'application en m'inspirant de l'architecture push : 
 
-![image-20201227150908301](C:\Users\magal\AppData\Roaming\Typora\typora-user-images\image-20201227150908301.png)
+![push architecture](https://github.com/magali0411/chatters-app/img/push.png?raw=true)
 
 Pour se connecter, chaque client possède une _ClientApp_. Chacune d'entre elles instancie :
 
@@ -45,26 +45,29 @@ Pour lancer l'application cliente, il faut lancer la classe ClientApp qui étend
 
 #### Lancement d'application clientes
 
-#### <img src="C:\Users\magal\AppData\Roaming\Typora\typora-user-images\image-20210101120524969.png" alt="image-20210101120524969" style="zoom:50%;" /><img src="C:\Users\magal\AppData\Roaming\Typora\typora-user-images\image-20210101120747545.png" alt="image-20210101120747545" style="zoom:70%;" />
+
+![client app](https://github.com/magali0411/chatters-app/img/localhost.png?raw=true)
+
+![port 109](https://github.com/magali0411/chatters-app/img/fail.png?raw=true)
+
+
 
 L'application ne se lance que si tout les champs sont complets et un serveur écoute bien sur le port sur serveur précisé. Dans l'exemple, l'utilisateur à essayé de se connecté au __port 109__ au lieu du __1099__ et ne peut donc pas se connecter. 
 
 Trois clients connectés sur le __port 1099__ du serveur _locahost_ :
 
-![image-20210101121239263](C:\Users\magal\AppData\Roaming\Typora\typora-user-images\image-20210101121239263.png) 
+
+![connections des clients](https://github.com/magali0411/chatters-app/img/3apps.png?raw=true)
+
 
 La liste des clients connectés se met automatiquement à jour. Chaque client peut alors envoyer des messages aux autres clients connectés. 
 
 Les messages ne s'envoient qu'aux clients concernés. Si le message est vide ou que le destinataire n'est pas connecté, le message n'est pas envoyé. 
 
-![image-20210101121515173](C:\Users\magal\AppData\Roaming\Typora\typora-user-images\image-20210101121515173.png)
-
-
-
 Un utilisateur a la possibilité de supprimer les message s'affichant sur son interface. Si un client se déconnecte, sa fenêtre de chat se ferme et son nom disparait instantanément de la liste des clients connectés. 
 
-<img src="C:\Users\magal\AppData\Roaming\Typora\typora-user-images\image-20210101121659502.png" alt="image-20210101121659502" style="zoom:67%;" />
 
+![deconnection](https://github.com/magali0411/chatters-app/img/2apps.png?raw=true)
 
 
 Grâce à l'utilisation de Logger, on peut observer le comportement de l'application dans la console : 
