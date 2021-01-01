@@ -4,60 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca6298f9-6726-4f47-8a1a-063db6648914" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/chatters-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/1792374d6215530086b48dc1749c3571cc579326" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/224f0573de3ae6b446943540df166d2dc26a0c9c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/2535456598da7fac8e8502ddd8ceae634e1dfd2b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/3341b43c617d2bcf4f460301f7f93d9afd9fde92" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38a88c979045d80da74705c1c6637cbcfafc1dfc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/91d63faad33dfe722770de3435fd48d37e1d984f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cdf6ba3736a8185f7ea8de667f76c8ac3350b80f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e3629527e13049a46c6eff43ff9f879cffcb180f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.scannerwork/.sonar_lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/serveur/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RemoteSystemsTempFiles/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatters-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chatters-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/META-INF/chatters-app.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/client/ClientApp$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/client/ClientApp$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/client/ClientApp$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/client/ClientApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/client/ClientUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/client/Connection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/client/ConnectionImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/client/Emitter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/client/EmitterImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/client/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/client/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/serveur/Receiver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/serveur/ReceiverImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/serveur/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/util/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/ClientApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/ClientUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Connection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/ConnectionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/ConnectionImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Emitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Emitter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/EmitterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/EmitterImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serveur/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/serveur/Receiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serveur/ReceiverImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/serveur/ReceiverImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serveur/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Message.java" afterDir="false" />
+    <list default="true" id="ca6298f9-6726-4f47-8a1a-063db6648914" name="Default Changelist" comment="clone cleanup with sonar">
+      <change afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint-state.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/1792374d6215530086b48dc1749c3571cc579326" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/224f0573de3ae6b446943540df166d2dc26a0c9c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/2535456598da7fac8e8502ddd8ceae634e1dfd2b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/3341b43c617d2bcf4f460301f7f93d9afd9fde92" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38a88c979045d80da74705c1c6637cbcfafc1dfc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/91d63faad33dfe722770de3435fd48d37e1d984f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cdf6ba3736a8185f7ea8de667f76c8ac3350b80f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e3629527e13049a46c6eff43ff9f879cffcb180f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ConnectionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ConnectionImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/serveur/ReceiverImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/serveur/ReceiverImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/util/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/util/Message.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,13 +51,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_ANALYSIS_RESULTS_SPLIT_PROPORTION" value="0.66047746" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../Program Files/Java/javafx-sdk-11.0.2/lib" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="build.tools" />
+    <property name="settings.editor.selected.configurable" value="projectSettingsConfigurable" />
   </component>
   <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application" singleton="false">
@@ -121,15 +91,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,8 +120,18 @@
       <workItem from="1609415206977" duration="745000" />
       <workItem from="1609420920665" duration="989000" />
       <workItem from="1609421958819" duration="1457000" />
-      <workItem from="1609423469823" duration="4482000" />
+      <workItem from="1609423469823" duration="4696000" />
+      <workItem from="1609495671852" duration="310000" />
+      <workItem from="1609496038786" duration="3524000" />
     </task>
+    <task id="LOCAL-00001" summary="clone cleanup with sonar">
+      <created>1609428174187</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609428174187</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,5 +148,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="clone cleanup with sonar" />
+    <option name="LAST_COMMIT_MESSAGE" value="clone cleanup with sonar" />
   </component>
 </project>

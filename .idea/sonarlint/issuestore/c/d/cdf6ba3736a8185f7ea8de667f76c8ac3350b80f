@@ -1,9 +1,0 @@
-
-œ
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Éã¼Ïøÿÿÿÿ
-F
-java:S2160"+Override the "equals" method in this class.(¸ðåôûÿÿÿÿ
-‡
-java:S1130"qRemove the declaration of thrown exception 'java.rmi.RemoteException', as it cannot be thrown from method's body.(±¬š”
-n
-java:S1104"YMake clientAssocie a static final constant or non-public and provide accessors if needed.(¦º¡]
