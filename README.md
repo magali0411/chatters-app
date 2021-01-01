@@ -46,7 +46,7 @@ Pour lancer l'application cliente, il faut lancer la classe ClientApp qui étend
 
 #### Lancement d'application clientes
 
-<img width="400" alt="client app" src="img/localhost.png">
+<img width="400" alt="client app" src="img/roger.png">
 
 <img width="300" alt="port 109" src="img/fail.png">
 
@@ -63,6 +63,8 @@ Trois clients connectés sur le __port 1099__ du serveur _locahost_ :
 La liste des clients connectés se met automatiquement à jour. Chaque client peut alors envoyer des messages aux autres clients connectés. 
 
 Les messages ne s'envoient qu'aux clients concernés. Si le message est vide ou que le destinataire n'est pas connecté, le message n'est pas envoyé. 
+
+<img width="600" alt="messages" src="img/messages.png">
 
 Un utilisateur a la possibilité de supprimer les message s'affichant sur son interface. Si un client se déconnecte, sa fenêtre de chat se ferme et son nom disparait instantanément de la liste des clients connectés. 
 
