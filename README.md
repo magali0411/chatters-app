@@ -13,7 +13,8 @@ L'objectif de ce projet est de développer une application logicielle client / s
 
 Dans le cadre de ce projet, j'ai choisi de réaliser l'application en m'inspirant de l'architecture push : 
 
-![](https://github.com/magali0411/chatters-app/tree/master/img/push.png  | width=100)
+<img width="200" alt="push architecture" src="https://github.com/magali0411/chatters-app/tree/master/img/push.png">
+
 
 Pour se connecter, chaque client possède une _ClientApp_. Chacune d'entre elles instancie :
 
