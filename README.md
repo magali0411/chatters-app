@@ -74,8 +74,5 @@ janv. 01, 2021 12:11:20 PM main.java.client.ClientApp lambda$chatScene$0
 INFO: name : Julie
 janv. 01, 2021 12:11:21 PM main.java.serveur.ReceiverImpl addClient
 INFO: Client ajoutÃ© : Julie
+INFO: Stage is closing
 ```
-
-
-
-Lien git du projet : https://github.com/magali0411/chatters-app
