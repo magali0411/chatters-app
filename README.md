@@ -13,7 +13,7 @@ L'objectif de ce projet est de développer une application logicielle client / s
 
 Dans le cadre de ce projet, j'ai choisi de réaliser l'application en m'inspirant de l'architecture push : 
 
-<img width="500" alt="push architecture" src="img/push.png">
+<img width="600" alt="push architecture" src="img/push.png">
 
 
 Pour se connecter, chaque client possède une _ClientApp_. Chacune d'entre elles instancie :
@@ -46,9 +46,9 @@ Pour lancer l'application cliente, il faut lancer la classe ClientApp qui étend
 
 #### Lancement d'application clientes
 
-<img width="500" alt="client app" src="img/localhost.png">
+<img width="400" alt="client app" src="img/localhost.png">
 
-<img width="500" alt="port 109" src="img/fail.png">
+<img width="300" alt="port 109" src="img/fail.png">
 
 
 
@@ -57,7 +57,7 @@ L'application ne se lance que si tout les champs sont complets et un serveur éc
 
 Trois clients connectés sur le __port 1099__ du serveur _locahost_ :
 
-<img width="500" alt="connections des clients" src="img/3apps.png">
+<img width="700" alt="connections des clients" src="img/3apps.png">
 
 
 La liste des clients connectés se met automatiquement à jour. Chaque client peut alors envoyer des messages aux autres clients connectés. 
@@ -67,7 +67,7 @@ Les messages ne s'envoient qu'aux clients concernés. Si le message est vide ou 
 Un utilisateur a la possibilité de supprimer les message s'affichant sur son interface. Si un client se déconnecte, sa fenêtre de chat se ferme et son nom disparait instantanément de la liste des clients connectés. 
 
 
-<img width="500" alt="deconnection" src="img/2apps.png">
+<img width="600" alt="deconnection" src="img/2apps.png">
 
 
 Grâce à l'utilisation de Logger, on peut observer le comportement de l'application dans la console : 
