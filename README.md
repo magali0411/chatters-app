@@ -57,14 +57,14 @@ L'application ne se lance que si tout les champs sont complets et un serveur éc
 
 Trois clients connectés sur le __port 1099__ du serveur _locahost_ :
 
-<img width="700" alt="connections des clients" src="img/3apps.png">
+<img width="800" alt="connections des clients" src="img/3apps.png">
 
 
 La liste des clients connectés se met automatiquement à jour. Chaque client peut alors envoyer des messages aux autres clients connectés. 
 
 Les messages ne s'envoient qu'aux clients concernés. Si le message est vide ou que le destinataire n'est pas connecté, le message n'est pas envoyé. 
 
-<img width="600" alt="messages" src="img/messages.png">
+<img width="800" alt="messages" src="img/messages.png">
 
 Un utilisateur a la possibilité de supprimer les message s'affichant sur son interface. Si un client se déconnecte, sa fenêtre de chat se ferme et son nom disparait instantanément de la liste des clients connectés. 
 
