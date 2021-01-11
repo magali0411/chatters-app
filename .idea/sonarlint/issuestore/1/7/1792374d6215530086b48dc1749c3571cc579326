@@ -1,0 +1,23 @@
+
+>
+java:S1604À"(Make this anonymous inner class a lambda(Ž®Õ{
+M
+java:S1854À"7Remove this useless assignment to local variable "maj".(Ž®Õ{
+>
+java:S1481À"(Remove this unused "maj" local variable.(Ž®Õ{
+>
+java:S1604K"(Make this anonymous inner class a lambda(®Þñç
+I
+java:S1199‘"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+F
+java:S3740°"/Provide the parametrized type for this generic.(ÙüÝš
+n
+java:S3776£"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Ä‹Àñýÿÿÿÿ
+I
+java:S1199…"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+H
+java:S1199h"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+F
+java:S3740°"/Provide the parametrized type for this generic.(ÙüÝš
+>
+java:S1604Ë"(Make this anonymous inner class a lambda(Ì®Ü	

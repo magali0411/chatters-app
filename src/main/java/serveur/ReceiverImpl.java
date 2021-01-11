@@ -1,4 +1,4 @@
-package main.java.serveur;
+package serveur;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -28,7 +28,7 @@ public class ReceiverImpl extends UnicastRemoteObject implements Receiver, Seria
     @Override
     public void addClient(String pseudo) throws RemoteException {
 
-        logger.log(Level.INFO,"Client ajouté : {0}", pseudo);
+        logger.log(Level.INFO, "Client ajouté : {0}", pseudo);
         clientList.add(pseudo);
     }
 
@@ -46,7 +46,7 @@ public class ReceiverImpl extends UnicastRemoteObject implements Receiver, Seria
     @Override
     public void receive(String sender, String msg) throws RemoteException {
 
-        listMessages.add("[" + sender+"] " + msg + "\n");
+        listMessages.add("[" + sender + "] " + msg + "\n");
 
     }
 

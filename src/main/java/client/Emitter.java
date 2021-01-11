@@ -1,7 +1,7 @@
-package main.java.client;
+package client;
 
 
-import main.java.serveur.Receiver;
+import serveur.Receiver;
 
 import java.net.MalformedURLException;
 import java.rmi.NotBoundException;

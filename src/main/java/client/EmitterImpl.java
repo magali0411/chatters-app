@@ -1,7 +1,7 @@
-package main.java.client;
+package client;
 
 
-import main.java.serveur.Receiver;
+import serveur.Receiver;
 
 import java.net.MalformedURLException;
 import java.rmi.NotBoundException;
@@ -33,7 +33,7 @@ public class EmitterImpl extends UnicastRemoteObject implements Emitter {
     }
 
     public void sendMessages(Receiver to, String s) throws RemoteException, MalformedURLException, NotBoundException {
-        to.receive(this.getName(),s);
+        to.receive(this.getName(), s);
     }
 
 

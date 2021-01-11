@@ -1,6 +1,6 @@
-package main.java.client;
+package client;
 
-import main.java.serveur.Receiver;
+import serveur.Receiver;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -27,7 +27,7 @@ public class ConnectionImpl extends UnicastRemoteObject implements Connection, S
 
 
     @Override
-    public Emitter connect(String name, Receiver re) throws RemoteException, MalformedURLException, NotBoundException {
+    public Emitter connect(String name, Receiver re) throws RemoteException {
 
 
         re.initClient(getAllusername());
@@ -35,11 +35,11 @@ public class ConnectionImpl extends UnicastRemoteObject implements Connection, S
         Emitter emitter = new EmitterImpl();
         emitter.setName(name);
 
-        dicoProxy.put(name,re);
+        dicoProxy.put(name, re);
         re.addClient(name);
 
 
-        logger.log(Level.INFO,"'{} s'est connecté au chat",name);
+        logger.log(Level.INFO, "'{} s'est connecté au chat", name);
 
         return emitter;
     }
@@ -51,11 +51,11 @@ public class ConnectionImpl extends UnicastRemoteObject implements Connection, S
         if (reSuppr != null)
             reSuppr.removeClient(pseudo);
         else
-            logger.log(Level.WARNING,"Impossible de déconnecter le client {0}", pseudo);
+            logger.log(Level.WARNING, "Impossible de déconnecter le client {0}", pseudo);
 
     }
 
-    public List<Receiver> getAllReceiver(){
+    public List<Receiver> getAllReceiver() {
         List<Receiver> allR = new ArrayList<>();
         for (Receiver r : dicoProxy.values()) {
             allR.add(r);
@@ -63,7 +63,7 @@ public class ConnectionImpl extends UnicastRemoteObject implements Connection, S
         return allR;
     }
 
-    public List<String> getAllusername(){
+    public List<String> getAllusername() {
         List<String> allU = new ArrayList<>();
         for (String username : dicoProxy.keySet()) {
             allU.add(username);
@@ -72,11 +72,11 @@ public class ConnectionImpl extends UnicastRemoteObject implements Connection, S
     }
 
     @Override
-    public Receiver getReceiver(String name){
+    public Receiver getReceiver(String name) {
         Receiver re = null;
         for (Map.Entry<String, Receiver> entry : dicoProxy.entrySet()) {
             String reName = entry.getKey();
-            if ( reName.equals(name) )
+            if (reName.equals(name))
                 re = dicoProxy.get(reName);
         }
         return re;

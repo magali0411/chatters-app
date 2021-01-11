@@ -1,0 +1,43 @@
+
+h
+8out/production/chatters-app/main/java/client/sample.fxml,e\f\efd7292631b6dad359a8ef06d3fcd4ae0dbb6089
+>
+.metadata/.log,c\a\cab00ac24422875c0136ae8b097cd9ff205d7a6c
+E
+.metadata/version.ini,b\1\b1e62205674bac79a7a30d2c7fa8da5704e112d8
+O
+RemoteSystemsTempFiles/.project,e\1\e170842aea079c5e839125eb5576c09fa8120cb8
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+Q
+!src/main/java/serveur/Server.java,9\1\91d63faad33dfe722770de3435fd48d37e1d984f
+W
+'src/main/java/serveur/ReceiverImpl.java,2\5\2535456598da7fac8e8502ddd8ceae634e1dfd2b
+X
+(src/main/java/client/ConnectionImpl.java,e\3\e3629527e13049a46c6eff43ff9f879cffcb180f
+T
+$src/main/java/client/Connection.java,2\2\224f0573de3ae6b446943540df166d2dc26a0c9c
+Q
+!src/main/java/client/Emitter.java,3\8\38a88c979045d80da74705c1c6637cbcfafc1dfc
+P
+ src/main/java/client/sample.fxml,d\f\df2ec35020e367828bfc6d8a073b967eafc34dfa
+O
+src/main/java/util/Message.java,9\e\9e1d24627c5de63cc46d32d31e5f11a4bb3885ed
+S
+#src/main/java/serveur/Receiver.java,3\3\3341b43c617d2bcf4f460301f7f93d9afd9fde92
+U
+%src/main/java/client/EmitterImpl.java,c\d\cdf6ba3736a8185f7ea8de667f76c8ac3350b80f
+S
+#src/main/java/client/ClientApp.java,1\7\1792374d6215530086b48dc1749c3571cc579326
+R
+"src/main/java/test/ServerTest.java,8\2\82c96d9c4fa7fffce0c905b8cf44641d650c3add
+X
+(src/main/java/test/ReceiverImplTest.java,8\1\810db4bee04e0a95c0470bdc70bc39fefeac0023
+Z
+*src/main/java/test/ConnectionImplTest.java,5\0\50cfea8765dc927a3c1f28fe601c039c3e34cfe5
+U
+%src/main/java/test/ClientAppTest.java,3\e\3e8334fe686bd48a43dbe7ecc33a818de9e65ebb
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+W
+'src/main/java/test/EmitterImplTest.java,1\d\1d7b95ba2b08d0065a024d27c0fb3a3466ccf98d

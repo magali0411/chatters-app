@@ -1,10 +1,12 @@
-package main.java.util;
+package util;
 
 import javafx.scene.control.Alert;
 
 public class Message {
 
-    private Message() { throw new IllegalStateException("Utility class");}
+    private Message() {
+        throw new IllegalStateException("Utility class");
+    }
 
     public static Alert showPopupAlert(String header, String texte) {
         Alert popup = new Alert(Alert.AlertType.ERROR);

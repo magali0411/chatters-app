@@ -4,28 +4,206 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca6298f9-6726-4f47-8a1a-063db6648914" name="Default Changelist" comment="clone cleanup with sonar">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint-state.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/1792374d6215530086b48dc1749c3571cc579326" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/224f0573de3ae6b446943540df166d2dc26a0c9c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/2535456598da7fac8e8502ddd8ceae634e1dfd2b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/3341b43c617d2bcf4f460301f7f93d9afd9fde92" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38a88c979045d80da74705c1c6637cbcfafc1dfc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/91d63faad33dfe722770de3435fd48d37e1d984f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cdf6ba3736a8185f7ea8de667f76c8ac3350b80f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e3629527e13049a46c6eff43ff9f879cffcb180f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+    <list default="true" id="ca6298f9-6726-4f47-8a1a-063db6648914" name="Default Changelist" comment="Mise en oeuvre de Maven + Début des test unitaires avec JUnit et Mockito">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_10_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mockito_core_3_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/1792374d6215530086b48dc1749c3571cc579326" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e1d24627c5de63cc46d32d31e5f11a4bb3885ed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1e62205674bac79a7a30d2c7fa8da5704e112d8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/cab00ac24422875c0136ae8b097cd9ff205d7a6c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cdf6ba3736a8185f7ea8de667f76c8ac3350b80f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/df2ec35020e367828bfc6d8a073b967eafc34dfa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e170842aea079c5e839125eb5576c09fa8120cb8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e3629527e13049a46c6eff43ff9f879cffcb180f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/efd7292631b6dad359a8ef06d3fcd4ae0dbb6089" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ReceiverImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/chatters-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/chatters-app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ConnectionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ConnectionImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/serveur/ReceiverImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/serveur/ReceiverImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/util/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatters-app/main/java/util/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/1.tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jsch.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.jsdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.jsdt.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.server.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.jboss.ide.eclipse.as.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.jboss.tools.central.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.jboss.tools.runtime.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_0.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments.gen" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments_2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/write.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/224f0573de3ae6b446943540df166d2dc26a0c9c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/5d8eb01c0b194192f3e2c3708b526906/_0.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/5d8eb01c0b194192f3e2c3708b526906/segments.gen" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/5d8eb01c0b194192f3e2c3708b526906/segments_2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/5d8eb01c0b194192f3e2c3708b526906/write.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/2535456598da7fac8e8502ddd8ceae634e1dfd2b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments.gen" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments_2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/write.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/3341b43c617d2bcf4f460301f7f93d9afd9fde92" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.15.0.20191217-1149.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.rse.core/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38a88c979045d80da74705c1c6637cbcfafc1dfc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.rse.core/initializerMarks/org.eclipse.rse.internal.core.RSELocalConnectionInitializer.mark" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.laptop-magali_8096/FP.local.files_0/node.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.laptop-magali_8096/H.local_16/node.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.laptop-magali_8096/node.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.rse.ui/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/91d63faad33dfe722770de3435fd48d37e1d984f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.tips.ide/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.tm.terminal.view.ui/.executables/data.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.intro/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.intro/introstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/baseBrowserLibrary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/browserWindow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/dom5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/system.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/xhr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/variablesAndContainers.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.ui/OpenTypeHistory.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.ui/QualifiedTypeNameHistory.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.32" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.40" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.50" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.60" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.70" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.eap.43" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.eap.50" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.eap.60" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.eap.61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.eap.70" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.eap.71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.eap.72" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.eap.73" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.100" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.110" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.120" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.130" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.140" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.150" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.160" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.170" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.180" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.190" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.200" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.210" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.80" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.ide.eclipse.as.core/.global/filesets/default/org.jboss.ide.eclipse.as.wildfly.90" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/css/jboss-app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/css/overpass-light.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/css/overpass-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/css/overpass-thin.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/css/overpass.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/background_img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/background_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/background_img.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/background_img_bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/background_img_bottom.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/icon-addtools.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/icon-addtools.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/icon-community.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/icon-community.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/icon-default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/icon-html5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/icon-hybridmobile.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/icon-info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/icon-info.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/icon-javaee.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/images/icon-openshift.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/js/main.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/lib/bootstrap-sass-official/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/lib/bootstrap-sass-official/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/lib/bootstrap-sass-official/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/lib/bootstrap-sass-official/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/lib/bootstrap-sass-official/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/lib/bootstrap-sass-official/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/lib/jquery-highlight/js/jquery.highlight.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/lib/jquery/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/6e71c32/lib/twbs-pagination/js/jquery.twbsPagination.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/central/loading_2.1.400.v20200924_1349.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/images/1335726242/openshift-logo-white-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/images/1483658544/quarkus_icon_rgb_16px_default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/images/422868421/new_m2_project.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/images/986166757/fabric8_icon_16px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.central/proxyWizards/1607337246901/org.jboss.tools.central.discovery_4.17.0.Final_v20201001_1326_B8838.jar_13910361676535137274.downloading" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.foundation.core/ECF_REMOTE_CACHE/URLTransportCache.cacheIndex.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.foundation.core/ECF_REMOTE_CACHE/ad3e417d20abdea71e86f550c1be41ac94c872253299846442930308661.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.foundation.core/ECF_REMOTE_CACHE/e5a201d558e30dd4a179eb4676a3ce22efb27d1a1384144213277532561.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.project.examples/quickstarts-json/6b9acd894ddf7033b2877ef97e2729f2f83c1b271435148947886449045.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.project.examples/quickstarts-json/URLTransportCache.cacheIndex.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.usage/events/9eb0b862-8982-3846-a5bb-3f80d458335d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.usage/events/central-browser-IE+_11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.jboss.tools.usage/events/central-showOnStartup-true" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ClientApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/Connection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/ConnectionImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/Emitter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/EmitterImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/client/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/serveur/Receiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/serveur/ReceiverImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/serveur/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatters-app/main/java/util/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/ClientApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/ConnectionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/ConnectionImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/Emitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Emitter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/EmitterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/EmitterImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/serveur/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/serveur/Receiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/serveur/ReceiverImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/serveur/ReceiverImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/serveur/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/serveur/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/Message.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +213,14 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -42,12 +228,20 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1mQ7P6qE65QyRhxo2P2ULZLpRCm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -55,17 +249,35 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../Program Files/Java/javafx-sdk-11.0.2/lib" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../Developpement/mockito-core-3.7.0.jar" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="projectSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="main.java.client.Connection" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\magal\Documents\S9EMA\Programmation distribuée - Vauttier\chatters-app\src\test\java" />
+      <recent name="C:\Users\magal\Documents\S9EMA\Programmation distribuée - Vauttier\chatters-app\src\test" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="main.java.client" />
+      <recent name="test" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application" singleton="false">
       <option name="ALTERNATIVE_JRE_PATH" value="jdk15" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="main.java.client.ClientApp" />
+      <option name="MAIN_CLASS_NAME" value="client.ClientApp" />
       <module name="chatters-app" />
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
@@ -75,7 +287,7 @@
     <configuration name="Serveur" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="jdk15" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="main.java.serveur.Server" />
+      <option name="MAIN_CLASS_NAME" value="serveur.Server" />
       <module name="chatters-app" />
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
@@ -102,10 +314,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReceiverImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chatters-app" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ReceiverImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Client" />
       <item itemvalue="Application.Serveur" />
+      <item itemvalue="JUnit.ReceiverImplTest" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ReceiverImplTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -122,7 +349,11 @@
       <workItem from="1609421958819" duration="1457000" />
       <workItem from="1609423469823" duration="4696000" />
       <workItem from="1609495671852" duration="310000" />
-      <workItem from="1609496038786" duration="3524000" />
+      <workItem from="1609496038786" duration="5913000" />
+      <workItem from="1610391010128" duration="2195000" />
+      <workItem from="1610393576087" duration="1993000" />
+      <workItem from="1610395614332" duration="2206000" />
+      <workItem from="1610397893390" duration="3261000" />
     </task>
     <task id="LOCAL-00001" summary="clone cleanup with sonar">
       <created>1609428174187</created>
@@ -131,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609428174187</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ajout readme">
+      <created>1609500304385</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609500304385</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +388,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="clone cleanup with sonar" />
-    <option name="LAST_COMMIT_MESSAGE" value="clone cleanup with sonar" />
+    <MESSAGE value="ajout readme" />
+    <MESSAGE value="Mise en oeuvre de Maven + Début des test unitaires avec JUnit et Mockito" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise en oeuvre de Maven + Début des test unitaires avec JUnit et Mockito" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/chatters_app$ReceiverImplTest.ic" NAME="ReceiverImplTest Coverage Results" MODIFIED="1610400552404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

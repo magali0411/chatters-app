@@ -1,11 +1,4 @@
-package main.java.client;
-
-import java.net.MalformedURLException;
-import java.rmi.Naming;
-import java.rmi.NotBoundException;
-import java.rmi.RemoteException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+package client;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -30,10 +23,16 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import javafx.util.Duration;
+import serveur.Receiver;
+import serveur.ReceiverImpl;
+import util.Message;
 
-import main.java.serveur.Receiver;
-import main.java.serveur.ReceiverImpl;
-import main.java.util.Message;
+import java.net.MalformedURLException;
+import java.rmi.Naming;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class ClientApp extends Application {
@@ -47,11 +46,11 @@ public class ClientApp extends Application {
     static final Font FONTITALIC = Font.font("verdana", FontWeight.EXTRA_LIGHT, FontPosture.ITALIC, 9);
 
     //Logger
-    static final  Logger logger = Logger.getLogger("Client-app");
+    static final Logger logger = Logger.getLogger("Client-app");
 
 
     // Inititalisation des éléments RMI
-    Emitter emI ;
+    Emitter emI;
     Receiver reI;
     Connection connection;
 
@@ -61,15 +60,13 @@ public class ClientApp extends Application {
     private final ObservableList<String> listeClients = FXCollections.observableArrayList();
 
 
-
-
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        Alert popupClose = Message.showPopupAlert("Vous quittez l'application de chat","");
+        Alert popupClose = Message.showPopupAlert("Vous quittez l'application de chat", "");
 
         Group group = new Group();
-        Scene scene = new Scene(group ,600, 400);
+        Scene scene = new Scene(group, 600, 400);
         scene.setFill(Color.WHITE);
         primaryStage.setTitle("Chat-app");
         primaryStage.setScene(chatScene(primaryStage));
@@ -77,7 +74,7 @@ public class ClientApp extends Application {
 
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent we) {
-                logger.log(Level.INFO,"Stage is closing");
+                logger.log(Level.INFO, "Stage is closing");
                 popupClose.show();
             }
         });
@@ -105,17 +102,17 @@ public class ClientApp extends Application {
         Button submitBtn = new Button("Connection");
         submitBtn.onMouseClickedProperty().set((MouseEvent t) -> {
             {
-                if (!pseudoField.getText().isEmpty() && !portNumberField.getText().isEmpty() && !hostNameField.getText().isEmpty() ) {
+                if (!pseudoField.getText().isEmpty() && !portNumberField.getText().isEmpty() && !hostNameField.getText().isEmpty()) {
 
                     int port = Integer.parseInt(portNumberField.getText());
                     String name = pseudoField.getText();
-                    logger.log(Level.INFO,"name : {0}",name);
+                    logger.log(Level.INFO, "name : {0}", name);
 
 
                     try {
 
                         // Instanciation de la connection au serveur
-                        connection = (Connection) Naming.lookup("rmi://localhost:" + port +"/connection");
+                        connection = (Connection) Naming.lookup("rmi://localhost:" + port + "/connection");
 
                         // instanciation du receiver
                         this.reI = new ReceiverImpl();
@@ -125,11 +122,11 @@ public class ClientApp extends Application {
 
 
                         // Toast
-                        Alert popupConnect = Message.showPopupInfo("Connection réussie", "Vous êtes connecté(e) au serveur de chat en tant que "+ name );
+                        Alert popupConnect = Message.showPopupInfo("Connection réussie", "Vous êtes connecté(e) au serveur de chat en tant que " + name);
                         popupConnect.show();
 
                     } catch (MalformedURLException | NotBoundException | RemoteException e) {
-                        Alert popupPort = Message.showPopupAlert("Connection fail","Le PORT " + port + " du serveur " + hostNameField.getText() + " n'est pas accessible ");
+                        Alert popupPort = Message.showPopupAlert("Connection fail", "Le PORT " + port + " du serveur " + hostNameField.getText() + " n'est pas accessible ");
                         popupPort.show();
                     }
 
@@ -204,10 +201,9 @@ public class ClientApp extends Application {
 
         // action event
         EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent e)
-            {
+            public void handle(ActionEvent e) {
 
-                if(!chatTextField.getText().isEmpty() && !destTextField.getText().isEmpty()) {
+                if (!chatTextField.getText().isEmpty() && !destTextField.getText().isEmpty()) {
                     try {
                         listeMessages.addAll(reI.getMsg());
                         Receiver reDest = co.getReceiver(destTextField.getText());
@@ -216,7 +212,7 @@ public class ClientApp extends Application {
                             popupAlert.show();
                         } else {
                             emI.sendMessages(reDest, chatTextField.getText());
-                            reI.receive(emI.getName(),chatTextField.getText()); // self reception
+                            reI.receive(emI.getName(), chatTextField.getText()); // self reception
                         }
 
                     } catch (RemoteException | MalformedURLException | NotBoundException e1) {
@@ -251,7 +247,7 @@ public class ClientApp extends Application {
                 co.synchronise();
                 listeClients.clear();
                 listeClients.addAll(reI.getClients());
-                bandeauClient.setText("Clients connectés : " +listeClients);
+                bandeauClient.setText("Clients connectés : " + listeClients);
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
@@ -286,25 +282,23 @@ public class ClientApp extends Application {
         });
 
 
-        rootPane.add(userLabel,0,0);
-        rootPane.add(bandeauClient,0,1);
+        rootPane.add(userLabel, 0, 0);
+        rootPane.add(bandeauClient, 0, 1);
         rootPane.add(chatBox, 0, 2);
-        rootPane.add(msgLabel,0,3);
+        rootPane.add(msgLabel, 0, 3);
         rootPane.add(destLabel, 1, 3);
         rootPane.add(chatTextField, 0, 4);
         rootPane.add(destTextField, 1, 4);
-        rootPane.add(clearBtn,0,5);
-        rootPane.add(disconnectBtn,1,5);
-        rootPane.add(instructionLabel,0,6);
-
-
+        rootPane.add(clearBtn, 0, 5);
+        rootPane.add(disconnectBtn, 1, 5);
+        rootPane.add(instructionLabel, 0, 6);
 
 
         return new Scene(rootPane, 400, 400);
 
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         launch(args);
     }
 

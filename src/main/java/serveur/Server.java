@@ -1,7 +1,7 @@
-package main.java.serveur;
+package serveur;
 
 
-import main.java.client.ConnectionImpl;
+import client.ConnectionImpl;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
@@ -15,7 +15,7 @@ public class Server {
 
     public static void main(String[] args) throws RemoteException, MalformedURLException {
 
-        Logger logger= Logger.getLogger("serveur-app");
+        Logger logger = Logger.getLogger("serveur-app");
         final int PORT = 1099;
 
         // registry creation
@@ -26,7 +26,7 @@ public class Server {
         Naming.rebind("connection", connection);
 
 
-        logger.log(Level.INFO,"Serveur actif");
+        logger.log(Level.INFO, "Serveur actif");
 
 
     }
