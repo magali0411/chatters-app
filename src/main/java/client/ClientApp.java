@@ -49,7 +49,7 @@ public class ClientApp extends Application {
     static final Logger logger = Logger.getLogger("Client-app");
 
 
-    // Inititalisation des éléments RMI
+    // Inititalisation des Ã©lÃ©ments RMI
     Emitter emI;
     Receiver reI;
     Connection connection;
@@ -122,7 +122,7 @@ public class ClientApp extends Application {
 
 
                         // Toast
-                        Alert popupConnect = Message.showPopupInfo("Connection réussie", "Vous êtes connecté(e) au serveur de chat en tant que " + name);
+                        Alert popupConnect = Message.showPopupInfo("Connection rÃ©ussie", "Vous Ãªtes connectÃ©(e) au serveur de chat en tant que " + name);
                         popupConnect.show();
 
                     } catch (MalformedURLException | NotBoundException | RemoteException e) {
@@ -188,7 +188,7 @@ public class ClientApp extends Application {
         Button disconnectBtn = new Button("Deconnection");
 
 
-        // Mise à jour du chat
+        // Mise Ã  jour du chat
         EventHandler<ActionEvent> maj = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
                 try {
@@ -208,7 +208,7 @@ public class ClientApp extends Application {
                         listeMessages.addAll(reI.getMsg());
                         Receiver reDest = co.getReceiver(destTextField.getText());
                         if (reDest == null) {
-                            Alert popupAlert = Message.showPopupAlert("Impossible d'envoyer le message", "L'utilisateur " + destTextField.getText() + " n'est pas connecté.");
+                            Alert popupAlert = Message.showPopupAlert("Impossible d'envoyer le message", "L'utilisateur " + destTextField.getText() + " n'est pas connectÃ©.");
                             popupAlert.show();
                         } else {
                             emI.sendMessages(reDest, chatTextField.getText());
@@ -247,7 +247,7 @@ public class ClientApp extends Application {
                 co.synchronise();
                 listeClients.clear();
                 listeClients.addAll(reI.getClients());
-                bandeauClient.setText("Clients connectés : " + listeClients);
+                bandeauClient.setText("Clients connectÃ©s : " + listeClients);
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
